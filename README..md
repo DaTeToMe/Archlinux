@@ -11,6 +11,9 @@ timedatectl set-ntp true
 vim /etc/pacman.d/mirrorlist
 # or
 sed -i '/China/!{n;/Server/s/^/#/};t;n' /etc/pacman.d/mirrorlist
+# or
+vim /etc/pacman.d/mirrors.conf
+OnlyCountry = China
 
 # 更新
 pacman -Syu
