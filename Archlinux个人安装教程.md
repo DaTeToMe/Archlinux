@@ -66,6 +66,9 @@ or
 root用户设置
 # passwd
 
+安装微码
+# pacman -S intel-ucode
+
 引导程序安装
 # pacman -S dosfstools grub efibootmgr os-prober
 
@@ -86,3 +89,6 @@ or
 重启
 # reboot
 移除U盘
+
+加入WIN10启动项
+# grub-mkconfig -o /boot/grub/grub.cfg
