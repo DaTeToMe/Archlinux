@@ -37,7 +37,7 @@ mkfs.ext4 /dev/sd??
 ```
 mount /dev/sd?? /mnt
 mkdir /mnt/home
-mkdir /mnt/boot/EFI
+mkdir -p /mnt/boot/EFI
 mount /dev/sd?? /mnt/home
 mount /dev/sd?? /mnt/boot/EFI
 ```
