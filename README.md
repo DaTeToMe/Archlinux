@@ -91,9 +91,9 @@ systemctl enable NetworkManager
 ```
 passwd
 ```
-# 安装微码
+# 安装微码 支持NTFS格式
 ```
-pacman -S intel-ucode
+pacman -S intel-ucode ntfs-3g
 ```
 # 引导程序安装
 ```
@@ -101,7 +101,7 @@ pacman -S dosfstools grub efibootmgr os-prober
 
 grub-install /dev/sd??
 # or
-grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=grub
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=ArchLinux
 
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
@@ -121,7 +121,3 @@ reboot
 ```
 # 移除U盘
 
-# 加入WIN10启动项
-```
-grub-mkconfig -o /boot/grub/grub.cfg
-```
