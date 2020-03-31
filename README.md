@@ -39,7 +39,7 @@ mount /dev/sd?? /mnt/boot/EFI
 ```
 # 安装基础包
 ```
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel linux linux-firmware
 ```
 # 分区表生成
 ```
@@ -86,6 +86,8 @@ pacman -S iw wpa_supplicant dialog
 pacman -S networkmanager
 
 systemctl enable NetworkManager
+
+systemctl start NetworkManager
 ```
 # root用户设置
 ```
