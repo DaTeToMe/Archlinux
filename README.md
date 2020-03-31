@@ -17,11 +17,7 @@ vim /etc/pacman.d/mirrorlist
 ```
 sed -i '/China/!{n;/Server/s/^/#/};t;n' /etc/pacman.d/mirrorlist
 ```
-# 更新
-```
-pacman -Syu
-```
-# 分区
+ 分区
 ```
 cfdisk
 ```
@@ -84,6 +80,12 @@ systemctl enable dhcpcd
 # 无线连接
 ```
 pacman -S iw wpa_supplicant dialog
+```
+ or
+```
+pacman -S networkmanager
+
+systemctl enable NetworkManager
 ```
 # root用户设置
 ```
